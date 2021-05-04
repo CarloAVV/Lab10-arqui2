@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <label>Valor Raspberry: @ViewBag.ValorRaspi</label>
+    <label>Valor Web: @ViewBag.ValorWeb</label>
+    @using (Html.BeginForm("Post", "Home", FormMethod.Post))
+            {
+                <input name="valorWeb" type="text"/>
+                <input type="submit"/>
+            }
+</div>
